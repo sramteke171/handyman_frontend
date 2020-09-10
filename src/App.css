@@ -1,38 +1,289 @@
 .App {
+  padding: 0;
+  margin: 0;
+  width: 99.7vw;
+  height: 99.5vh;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 15% 80% 5%;
+  border: 2px solid;
+  /* border-color: #ff0000; */
+}
+a {
+  text-decoration: none;
+}
+.hContainer {
+  grid-row: 1;
+
+  /* grid-template-rows: 100%;
+  grid-template-columns: 20% 60% 20%;
+  border: 2px solid;
+  border-color: blue; */
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.title {
+  /* background: url("/images/header.jpg") white; */
+  background: black;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  font-size: 2vw;
+  width: 100%;
+  height: 11.5vh;
+  font-family: "verdana";
+  /* color: wheat; */
+  color: orangered;
+  /* text-shadow: 0 0 5px goldenrod, 0 0 30px #1310ce; */
+  text-shadow: 0 0 5px rgb(48, 27, 95) 30px #1310ce;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar {
+  /* background: url("https://media.giphy.com/media/3o7aCQTyoPLEVwVtZK/giphy.gif")
+    black; */
+  background: goldenrod;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 99.9vw;
+  height: 3.5vh;
+  height: "max-content";
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-flow: row nowrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+
+  /* grid-template-rows: 100%;
+  grid-template-columns: 20% 60% 20%;
+  border: 2px solid;
+  border-color: blue; */
+}
+.create_request,
+.all_requests {
+  color: black;
+  justify-content: left;
+  align-items: left;
+  font-weight: 800;
+  font-size: 1vw;
+  font-family: "Pinyon Script", cursive;
+}
+.link {
+  border-color: black;
+}
+.searchButton {
+  background: url("/images/buttons.png") black;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 5px;
+  border: 0.2vh solid;
+  border-color: white;
+  border-radius: 40px;
   color: white;
+  font-weight: 500;
+  font-size: 1vw;
+  font-family: "Pinyon Script", cursive;
 }
-
-.App-link {
-  color: #61dafb;
+.dropdown {
+  border-radius: 2vh;
+  border: 2px solid black;
+  text-align: center;
+  font-size: 0.9vw;
+  font-weight: bold;
+  font-family: "Pinyon Script", cursive;
+  width: 15vw;
+  /* text-align: center; */
+  text-align: right;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.mainContainer {
+  grid-row: 2;
+  display: grid;
+  /* grid-template-columns: 20% 60% 20%; */
+  grid-template-columns: 5% 90% 5%;
+  grid-template-rows: 100%;
+  /* background: url("/images/main.jpg") black; */
+  background: whitesmoke;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  justify-items: center;
+  align-items: center;
+}
+.banners {
+  border: 1px solid;
+  width: 90%;
+  height: 90%;
+  border: 0.5vh solid transparent;
+  border-top-style: none;
+  border-image: linear-gradient(to bottom, rgb(218, 65, 38), black) 1 100%;
+}
+/* #b1 {
+  grid-column: 1;
+  background: url("https://media.giphy.com/media/6WdfqTu3GkQ6s/giphy.gif") black;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  border-radius: 3vw;
+} */
+.mRandomQuote {
+  grid-column: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2vw;
+}
+.blockquote {
+  /* background: rgba(255, 255, 255, 0.7); */
+  background: rgba(156, 159, 160, 0.7);
+  -webkit-box-shadow: 10px 13px 18px 5px rgba(0, 0, 0, 0.7);
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  border-top-left-radius: 7vw;
+  border-bottom-right-radius: 7vw;
+  width: 90%;
+  font-size: 3vw;
+  padding: 1vw;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 50% 50%;
+}
+.quote {
+  grid-row: 1;
+  font-family: "Vanessa Handscript";
+  color: black;
+  text-shadow: 0 0 5px goldenrod, 0 0 30px #ff0000;
+  text-align: center;
+}
+.name {
+  grid-row: 2;
+  font-family: "Julia-HandScript";
+  text-shadow: 0 0 10px black, 0 0 100px white;
+  font-size: 4vw;
+  font-weight: 560;
+  color: navy;
+  text-align: end;
+}
+/* #b2 {
+  grid-column: 3;
+  background: url("https://media.giphy.com/media/iDfP8wxwqu248uPo17/giphy.gif")
+    black;
+  background-size: 115% 115%;
+  background-repeat: no-repeat;
+  border-radius: 3vw;
+} */
+.footer {
+  font-family: "Game of Thrones";
+  text-align: center;
+  font-size: 0.8vw;
+  background: url("/images/footer.jpg") black;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  font-weight: 300;
+  color: wheat;
+  text-shadow: 0 0 5px rgb(0, 50, 177), 0 0 30px midnightblue;
+}
+.characterContainer {
+  background: url("/images/mainbg.jpg") black;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  display: grid;
+  grid-template-columns: 35% 65%;
+  grid-template-rows: 100%;
+  border-radius: 3vw;
+}
+.fCol {
+  grid-column: 1;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  justify-items: center;
+}
+.chImg {
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+.img {
+  width: 20vw;
+  height: 47vh;
+  /* width: 25vw; */
+  /* height: 57vh; */
+  /* border-radius: 5vw; */
+  border-radius: 50%;
+  -webkit-box-shadow: 10px 13px 18px 5px rgba(0, 0, 0, 0.7);
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}
+.btns {
+  background: url("/images/buttons.png") black;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  /* padding: 0.7vw; */
+  border: 0.2vh solid;
+  border-color: white;
+  border-radius: 40px;
+  color: white;
+  font-weight: 200;
+  font: 1.3vw "Pinyon Script", cursive;
+  margin: 0.5vw;
+}
+.btns:hover,
+.searchButton:hover {
+  opacity: 5;
+  text-shadow: 0 0 5px goldenrod, 0 0 30px #ff0000;
+  border-color: rgb(143, 93, 0);
+  font-style: italic;
+}
+.rating {
+  /* background: url("/images/buttons.png") black; */
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  /* padding: 0.7vw; */
+  /* border: 0.2vh solid;
+  border-color: white;
+  border-radius: 40px; */
+  color: white;
+  font-weight: 200;
+  font: 1.3vw "Pinyon Script", cursive;
+  margin: 0.5vw;
+}
+.quotesCont {
+  grid-column: 2;
+  color: black;
+}
+.chData {
+  font: 1vw "Pinyon Script", cursive;
+  margin-left: 3vw;
+  font-size: 1.2vw;
+  margin-top: 1vw;
+}
+.quotesArea {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: flex-start;
+  justify-items: center;
+}
+.sQuote {
+  list-style-type: none;
+  margin: 8px;
+  width: 25vw;
+  background: #eee;
+  border: 1px solid #ccc;
+  font: 1.1vw "Pinyon Script", cursive;
+  color: black;
+  text-shadow: 0 0 5px blue, 0 0 30px red;
+  text-align: center;
+  padding: 0.5vw;
+  background: rgba(255, 255, 255, 0.7);
+  border-top-right-radius: 5vw;
+  border-top-left-radius: 5vw;
+  border-bottom-right-radius: 5vw;
+  -webkit-box-shadow: 10px 13px 18px 5px rgba(0, 0, 0, 0.7);
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}
+.chDetail {
+  text-shadow: 0 0 5px goldenrod, 0 0 30px #ff0000;
+  font-style: italic;
 }

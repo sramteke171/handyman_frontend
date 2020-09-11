@@ -11,6 +11,6 @@ This app helps you to complete your work demand (whether it is plumbing requests
 
 App homepage Wireframe: (included under documents folder)
 
-![ER Diagram](documents/ER_Diagram1.jpg)
+![ER Diagram](documents/ER_Diagram.jpg)
 ![Search Layout](documents/search_wireframe.jpg)
 ![Search_Nav Layout](documents/search_wireframe1.jpg)

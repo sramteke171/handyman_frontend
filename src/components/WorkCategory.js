@@ -8,8 +8,8 @@ export default class WorkCategory extends Component {
   constructor(props) {
     super(props);
     this.name = "";
-    this.house = "";
-    this.quotes = [];
+    this.desc = "";
+    // this.quotes = [];
 
     this.state = {
       //   character: [],
@@ -21,37 +21,21 @@ export default class WorkCategory extends Component {
       bio: "",
     };
   }
-  //loadCharacter is in charge to hit the API with the parameter name of
+  //loadCategory is in charge to hit the API with the parameter name of
   //a selected character to display it/them on the Character component
-  loadCharacter = () => {
-    let characterAPI = this.translateName(this.props.match.params.name);
-    axios
-      .get(
-        `https://game-of-thrones-quotes.herokuapp.com/v1/author/${characterAPI}/5`,
-        {
-          headers: {
-            Accept: "application/json",
-          },
-        }
-      )
-      .then((response) => {
-        //Getting Character Image
-        let img;
-        let bio;
-        for (const prop in images)
-          if (images[prop].name === characterAPI) {
-            img = images[prop].img;
-            bio = images[prop].bio;
-          }
+  loadCategory = () => {
+    axios.get("http://localhost:3001/api/users").then((response) => {
+      // axios.get(`${backendUrl}/artists`).then((response) => {
+      // axios.get("http://localhost:3001/api/categories").then((response) => {
 
-        this.setState({
-          category: response.data,
-          image: img,
-          quote: "",
-          bio: bio,
-        });
+      console.log(response);
+      this.setState({
+        users: response.data.users,
+        // requests: response.data.allArtists,
       });
+    });
   };
+
   //Display Random will trigger getRandomInt to display a quite
   //priviously loaded from the API
   displayRandom = (e) => {
@@ -76,44 +60,27 @@ export default class WorkCategory extends Component {
       view: true,
     });
   };
-  //Translate name will give the correct format of the name for some characters
-  //that come from the API to hit another end point that requies a diff. format
-  translateName = (name) => {
-    let newName = name.toLowerCase();
-    switch (newName) {
-      case "eddard":
-        newName = "ned";
-        break;
-      case "lord":
-        newName = "varys";
-        break;
-      case "petyr":
-        newName = "baelish";
-        break;
-    }
-    return newName;
-  };
+
   render() {
     if (this.props.newCategory) {
-      this.loadCharacter();
+      this.loadCategory();
       this.props.changeCategory(false);
     }
     this.quotes = [];
     this.name = "";
     this.house = "";
     this.state.category.map((p) => {
-      this.name = p.character.name;
-      this.house = p.character.house.name;
-      if (typeof p === "object") {
-        this.quotes.push(p.sentence);
-      }
+      this.name = p.category.name;
+      this.desc = p.category.desc;
+      // if (typeof p === "object") {
+      //   this.quotes.push(p.sentence);
+      // }
     });
     return (
       <div className="characterContainer">
         <div className="fCol">
-          <a className="chImg" href={this.state.bio}>
-            <img className="img" src={this.state.image} alt={this.name} />
-          </a>
+          Name: {this.name}
+          <img className="img" src={this.state.image} alt={this.name} />
           <label className="rating"> Rating * * * * * </label>
           <table className="characterBtns">
             <tr>

@@ -46,7 +46,7 @@ class Header extends Component {
             >
               All Request
             </Link> */}
-            <Link to="/" className="all_requests">
+            <Link to="/requestsC" className="all_requests">
               Work Requests
             </Link>{" "}
             &nbsp;&nbsp;

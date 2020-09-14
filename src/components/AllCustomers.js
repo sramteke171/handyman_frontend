@@ -10,10 +10,6 @@ class AllCustomers extends Component {
           <button id={user.id} onClick={this.props.deleteCustomer}>
             Delete
           </button>
-
-          {/* <button id={user.id} onClick={this.props.updateCustomer}>
-            Edit
-          </button> */}
         </li>
       );
     });

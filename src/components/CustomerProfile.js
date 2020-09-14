@@ -15,39 +15,66 @@ class CustomerProfile extends Component {
             <input
               type="hidden"
               name="customer_Id"
-              value={CustomerProfile.id}
+              defaultValue={CustomerProfile.id}
             />
-            Name: <input type="text" name="name" value={customerProfile.name} />
+            Name:{" "}
+            <input type="text" name="name" value={customerProfile.name || ""} />
             <br />
             Username:{" "}
             <input
               type="text"
               name="user_name"
-              value={customerProfile.username}
+              defaultValue={customerProfile.username || ""}
             />
             <br />
             Password:{" "}
             <input
               type="text"
               name="password"
-              value={customerProfile.password}
+              defaultValue={customerProfile.password || ""}
             />
             <br />
-            Age: <input type="text" name="age" value={customerProfile.age} />
+            Age:{" "}
+            <input
+              type="text"
+              name="age"
+              defaultValue={customerProfile.age || ""}
+            />
             <br />
             Phone:{" "}
-            <input type="text" name="phone" value={customerProfile.phone} />
+            <input
+              type="text"
+              name="phone"
+              defaultValue={customerProfile.phone || ""}
+            />
             <br />
             Email:{" "}
-            <input type="text" name="email" value={customerProfile.email} />
+            <input
+              type="text"
+              name="email"
+              defaultValue={customerProfile.email || ""}
+            />
             <br />
-            City: <input type="text" name="city" value={customerProfile.city} />
+            City:{" "}
+            <input
+              type="text"
+              name="city"
+              defaultValue={customerProfile.city || ""}
+            />
             <br />
             State:{" "}
-            <input type="text" name="state" value={customerProfile.state} />
+            <input
+              type="text"
+              name="state"
+              defaultValue={customerProfile.state || ""}
+            />
             <br />
             Address:{" "}
-            <input type="text" name="address" value={customerProfile.address} />
+            <input
+              type="text"
+              name="address"
+              defaultValue={customerProfile.address || ""}
+            />
             <br />
             <br />
             &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;

@@ -1,7 +1,7 @@
 import "./App.css";
 import React, { Component } from "react";
 import axios from "axios";
-import { Route, Link, Switch } from "react-router-dom";
+import { Route, Link, Switch, Redirect } from "react-router-dom";
 import Header from "./components/Header";
 import AllTechnicians from "./components/AllTechnicians.js";
 import TechnicianDetail from "./components/TechnicianDetail.js";
@@ -97,31 +97,39 @@ class App extends Component {
     console.log("add technicians() - e.target.name.value", e.target.name.value);
     console.log(e.target.user_name.value);
     console.log(e.target.password.value);
-    axios
-      .post(`${backendUrl}/techniciansC`, {
-        name: e.target.name.value,
-        username: e.target.user_name.value,
-        password: e.target.password.value,
-      })
-      .then((response) => {
-        console.log(
-          "add technician() - response.data.technicians",
-          response.data.technician
-        );
-        let tempArray = this.state.technicians;
-        tempArray.push(response.data.technician);
-        this.setState({
-          technicians: tempArray,
+
+    if (
+      e.target.name.value == "" ||
+      e.target.user_name.value == "" ||
+      e.target.password.value == ""
+    ) {
+      alert("Please enter user details");
+    } else {
+      axios
+        .post(`${backendUrl}/techniciansC`, {
+          name: e.target.name.value,
+          username: e.target.user_name.value,
+          password: e.target.password.value,
+        })
+        .then((response) => {
+          console.log(
+            "add technician() - response.data.technicians",
+            response.data.technician
+          );
+          let tempArray = this.state.technicians;
+          tempArray.push(response.data.technician);
+          this.setState({
+            technicians: tempArray,
+          });
         });
-      });
+    } //end - else
   };
 
   //Update technician
   updateTechnician = (e) => {
     e.preventDefault();
     console.log("update technnician method - e.target", e.target);
-    // let technician_Id = 53;
-    // let technician_Id = parseInt(e.target.id);
+
     let technician_Id = e.target.technician_Id.value;
     console.log("technician_Id ", technician_Id);
 
@@ -178,29 +186,43 @@ class App extends Component {
   createRequest = (e) => {
     e.preventDefault();
     console.log("add request - e.target", e.target);
-    console.log("add request - e.target.value", e.target.description.value);
-    axios
-      .post(`${backendUrl}/requestsC`, {
-        req_desc: e.target.description.value,
-      })
-      .then((response) => {
-        console.log("add request method", response.data.request);
-        let tempArray = this.state.requests;
-        // tempArray.push(response.data.request);
-        tempArray.push(response.data.request);
-        this.setState({
-          requests: tempArray,
+    console.log("add request - e.target.value", e.target.req_desc.value);
+    if (e.target.req_desc.value == "") {
+      alert("Please type in Description field");
+    }
+    if (e.target.req_desc.value) {
+      axios
+        .post(`${backendUrl}/requestsC`, {
+          req_desc: e.target.req_desc.value,
+        })
+        .then((response) => {
+          console.log("add request method", response.data.request);
+          let tempArray = this.state.requests;
+          // tempArray.push(response.data.request);
+          tempArray.push(response.data.request);
+          this.setState({
+            requests: tempArray,
+          });
         });
-      });
+    } //end if
   };
 
   //UPDATE Request
   updateRequest = (e) => {
     e.preventDefault();
     console.log(e.target);
+
     let request_Id = e.target.request_Id.value;
+    console.log("request_Id ", request_Id);
+
     axios
-      .put(`${backendUrl}/requestsC/$(e.target.id.value}`)
+      .put(`${backendUrl}/requestsC/${request_Id}`, {
+        req_desc: e.target.req_desc.value,
+        req_start_date: e.target.req_start_date.value,
+        req_end_date: e.target.req_end_date.value,
+        user_id: e.target.user_id.value,
+        tech_id: e.target.tech_id.value,
+      })
       .then((response) => {
         this.getRequests();
         console.log(response);
@@ -245,46 +267,70 @@ class App extends Component {
     console.log(e.target.name.value);
     console.log(e.target.user_name.value);
     console.log(e.target.password.value);
-    axios
-      .post(`${backendUrl}/users`, {
-        name: e.target.name.value,
-        username: e.target.user_name.value,
-        password: e.target.password.value,
-      })
-      .then((response) => {
-        console.log("create customer method", response.data.user);
-        let tempCustArray = this.state.users;
-        tempCustArray.push(response.data.user);
-        this.setState({
-          users: tempCustArray,
+
+    if (
+      e.target.name.value == "" ||
+      e.target.user_name.value == "" ||
+      e.target.password.value == ""
+    ) {
+      alert("Please enter user details");
+    } else {
+      axios
+        .post(`${backendUrl}/users`, {
+          name: e.target.name.value,
+          username: e.target.user_name.value,
+          password: e.target.password.value,
+        })
+        .then((response) => {
+          console.log("create customer method", response.data.user);
+          let tempCustArray = this.state.users;
+          tempCustArray.push(response.data.user);
+          this.setState({
+            users: tempCustArray,
+          });
         });
-      });
+    } //end else
   };
 
   signupUser = (e) => {
     e.preventDefault();
     console.log("signupuser method- e.target ", e.target);
     console.log("signupuser method-  e.target.name.value", e.target.name.value);
-    axios
-      .post(`${backendUrl}/auth/signup`, {
-        name: e.target.name.value,
-        username: e.target.user_name.value,
-        password: e.target.password.value,
-        age: e.target.age.value,
-        phone: e.target.phone.value,
-        email: e.target.email.value,
-        city: e.target.city.value,
-        state: e.target.state.value,
-        address: e.target.address.value,
-      })
-      .then((response) => {
-        console.log("signupUser method", response.data.users);
-        let tempCustArray = this.state.users;
-        tempCustArray.push(response.data.user);
-        this.setState({
-          users: tempCustArray,
+    if (
+      e.target.name.value == "" ||
+      e.target.user_name.value == "" ||
+      e.target.password.value == ""
+    ) {
+      alert("Please enter user details");
+    }
+    if (
+      e.target.name.value &&
+      e.target.user_name.value &&
+      e.target.password.value
+    ) {
+      axios
+        .post(`${backendUrl}/auth/signup`, {
+          name: e.target.name.value,
+          username: e.target.user_name.value,
+          password: e.target.password.value,
+          age: e.target.age.value,
+          phone: e.target.phone.value,
+          email: e.target.email.value,
+          city: e.target.city.value,
+          state: e.target.state.value,
+          address: e.target.address.value,
+        })
+        .then((response) => {
+          console.log("signupUser method", response.data.users);
+          let tempCustArray = this.state.users;
+          tempCustArray.push(response.data.user);
+          this.setState({
+            users: tempCustArray,
+          });
+          // response.Redirect();
+          // <Redirect to="/users/CustomerProfile.js" />;
         });
-      });
+    } //end -else
   };
 
   //Update Customer
@@ -364,12 +410,14 @@ class App extends Component {
           <Switch>
             <Route
               exact
-              path="/"
+              // path="/"
+              path="/requestsC"
               component={() => (
                 <AllRequests
                   requests={this.state.requests}
                   createRequest={this.createRequest}
                   deleteRequest={this.deleteRequest}
+                  getRequest={this.getRequests}
                 />
               )}
             />
@@ -380,6 +428,8 @@ class App extends Component {
                 <RequestDetail
                   {...routerProps}
                   requests={this.state.requests}
+                  updateRequest={this.updateRequest}
+                  getRequest={this.getRequests}
                 />
               )}
             />

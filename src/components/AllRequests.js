@@ -4,15 +4,13 @@ import { Link } from "react-router-dom";
 class AllRequests extends Component {
   render() {
     const allRequests = this.props.requests.map((request) => {
+      console.log("allRequests-  request.id", request.id);
       return (
         <li key={request.id}>
-          <Link to={`/requestC/${request.id}`}> {request.req_desc} </Link>
+          <Link to={`/requestsC/${request.id}`}> {request.req_desc} </Link>
           <button id={request.id} onClick={this.props.deleteRequest}>
             Delete
           </button>
-          {/* <button id={request.id} onClick={this.props.updateRequest}>
-            Edit
-          </button> */}
         </li>
       );
     });
@@ -24,14 +22,13 @@ class AllRequests extends Component {
             <center>
               &nbsp; Description:
               <textarea
-                name="description"
+                name="req_desc"
                 rows="2"
                 cols="75"
                 maxLength="255"
                 placeholder="Describe work (255 chars allowed)"
               />
               &nbsp;
-              {/* <input type="text" name="name" /> &nbsp; */}
               <input
                 type="submit"
                 value="Add Request"

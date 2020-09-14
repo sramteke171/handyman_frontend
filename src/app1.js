@@ -137,3 +137,36 @@ class App extends Component {
 }
 
 export default App;
+
+// componentDidMount = () => {
+//   axios
+//     .get("http://localhost:3001/api/requestsC", {
+//       headers: {
+//         Accept: "application/json",
+//       },
+//     })
+//     .then((response) => {
+//       let requests = [];
+//       response.data.map((obj) => {
+//         if (requests.length > 0) {
+//           let load = true;
+//           for (let i = 0; i < requests.length; i++)
+//             if (requests[i] === obj.req_desc) {
+//               // if (names[i] === obj.character.name) {
+//               load = false;
+//               break;
+//             }
+//           // if (load) requests.push(obj.character.name);
+//         } else requests.push(obj.user_id);
+//       });
+//       this.setState({
+//         requests: requests,
+//         // allData: response.data,
+//       });
+//     });
+//   // this.getRequests();
+//   this.time = setInterval(this.getRequests, 6000);
+
+//   this.getRequests();
+//   this.getCustomers();
+//   this.getTechnicians();

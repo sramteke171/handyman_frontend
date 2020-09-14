@@ -18,14 +18,33 @@ class AllRequests extends Component {
     });
 
     return (
-      <div>
-        <h1> All Work Request </h1>
-        <h3> Create a New Work Request </h3>
-        <form onSubmit={this.props.addRequest}>
-          <input type="text" name="name" />
-          <input type="submit" value="Add Request" />
-        </form>
-        <ul>{allRequests}</ul>
+      <div class="requestContainer">
+        <div className="all_requests">
+          <form onSubmit={this.props.createRequest}>
+            <center>
+              &nbsp; Description:
+              <textarea
+                name="description"
+                rows="2"
+                cols="75"
+                maxLength="255"
+                placeholder="Describe work (255 chars allowed)"
+              />
+              &nbsp;
+              {/* <input type="text" name="name" /> &nbsp; */}
+              <input
+                type="submit"
+                value="Add Request"
+                className="addCustomerButton"
+              />
+              &nbsp;{" "}
+            </center>
+          </form>
+        </div>
+        <div class="requestContainer">
+          <h2> All Work Requests: </h2>
+          <ul>{allRequests}</ul>
+        </div>
       </div>
     );
   }

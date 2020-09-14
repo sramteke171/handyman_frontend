@@ -8,32 +8,19 @@ class Header extends Component {
     super(props);
 
     this.state = {
-      characters: [],
-      path: "",
+      requests: [],
+      users: [],
+      technicians: [],
+      categories: [],
     };
   }
-  //getPath builds the path to display data from the selected character
-  getPath = (e) => {
-    e.preventDefault();
-    if (e.target.value !== "names") {
-      let name =
-        e.target.value.substring(0, e.target.value.indexOf(" ")) !== ""
-          ? e.target.value.substring(0, e.target.value.indexOf(" "))
-          : e.target.value;
-      this.setState({
-        path: `/character/${name.toLowerCase()}`,
-      });
-    } else {
-      this.setState({
-        path: "/",
-      });
-    }
-  };
+
   //change is a wildcard that changes status to trigger re-rendering
   //over all the components when needed, specially when a another character is seleced.
-  change = () => {
-    if (this.state.path !== "/") this.props.changeCategory(true);
-  };
+  // change = () => {
+  //   if (this.state.path !== "/") this.props.changeCategory(true);
+  // };
+
   render() {
     return (
       <div className="hContainer">
@@ -44,33 +31,44 @@ class Header extends Component {
         </Link>
         <div className="navbar">
           <div class="link">
-            <Link
+            {/* <Link
               className="create_request"
-              to={this.state.path}
-              onClick={this.change}
+              to="/"
+              onClick={this.props.createRequest}
             >
               Create Request
-            </Link>{" "}
+            </Link> */}
             &nbsp;&nbsp;
-            <Link
+            {/* <Link
               className="all_requests"
               to={this.state.path}
               onClick={this.change}
             >
               All Request
-            </Link>
+            </Link> */}
+            <Link to="/" className="all_requests">
+              Work Requests
+            </Link>{" "}
+            &nbsp;&nbsp;
+            <Link to="/techniciansC" className="all_requests">
+              Technicians
+            </Link>{" "}
+            &nbsp;&nbsp;
+            <Link to="/users" className="all_requests">
+              Customers
+            </Link>{" "}
             &nbsp;&nbsp;
           </div>
           <div>
             <select className="dropdown" onChange={this.getPath}>
               <option value="names"></option>
-              {this.props.allNames.map((name, idx) => {
+              {/* {this.props.allNames.map((name, idx) => {
                 return (
                   <option key={idx} value={name}>
                     {name}
                   </option>
                 );
-              })}
+              })} */}
             </select>
             <Link
               className="searchButton"
@@ -78,6 +76,15 @@ class Header extends Component {
               onClick={this.change}
             >
               Search
+            </Link>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <Link to="/auth/signup" className="Signup">
+              Signup
+            </Link>{" "}
+            | &nbsp;
+            <Link to="/auth/login" className="Signup">
+              Login
             </Link>
           </div>
         </div>

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 class AllCustomers extends Component {
   render() {
-    const allCustomers = this.props.customers.map((user) => {
+    const allCustomers = this.props.users.map((user) => {
       return (
         <li key={user.id}>
           <Link to={`/users/${user.id}`}> {user.name} </Link>
@@ -19,13 +19,28 @@ class AllCustomers extends Component {
 
     return (
       <div>
-        <h1> All Customers </h1>
-        <h3> Create a New Customer </h3>
-        <form onSubmit={this.props.addCustomer}>
-          <input type="text" name="name" />
-          <input type="submit" value="Add Customer" />
-        </form>
-        <ul>{allCustomers}</ul>
+        <div class="requestContainer">
+          <div className="all_requests">
+            <form onSubmit={this.props.createCustomer}>
+              <center>
+                &nbsp; Name:
+                <input type="text" name="name" /> &nbsp; Username:
+                <input type="text" name="user_name" /> &nbsp; Password:
+                <input type="text" name="password" /> &nbsp;
+                <input
+                  type="submit"
+                  value="Add Customer"
+                  className="addCustomerButton"
+                />{" "}
+                &nbsp;
+              </center>
+            </form>
+          </div>
+        </div>
+        <div class="requestContainer">
+          <h2> Customers List: </h2>
+          <ul>{allCustomers}</ul>
+        </div>
       </div>
     );
   }

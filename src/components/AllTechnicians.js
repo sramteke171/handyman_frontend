@@ -20,9 +20,9 @@ class AllTechnicians extends Component {
             Delete
           </button>
 
-          <button id={technician.id} onClick={this.props.updateTechnician}>
+          {/* <button id={technician.id} onClick={this.props.updateTechnician}>
             Edit
-          </button>
+          </button> */}
         </li>
       );
     });

@@ -16,44 +16,70 @@ class TechnicianDetail extends Component {
             <input
               type="hidden"
               name="technician_Id"
-              value={TechnicianDetail.id}
+              // onChange={this.handleChange}
+              defaultValue={technicianDetail.id || ""}
             />
             Name:{" "}
-            <input type="text" name="name" value={technicianDetail.name} />
+            <input
+              type="text"
+              name="name"
+              defaultValue={technicianDetail.name || ""}
+            />
             <br />
             Username:{" "}
             <input
               type="text"
               name="user_name"
-              value={technicianDetail.username}
+              defaultValue={technicianDetail.username || ""}
             />
             <br />
             Password:{" "}
             <input
               type="text"
               name="password"
-              value={technicianDetail.password}
+              defaultValue={technicianDetail.password || ""}
             />
             <br />
-            Age: <input type="text" name="age" value={technicianDetail.age} />
+            Age:{" "}
+            <input
+              type="text"
+              name="age"
+              defaultValue={technicianDetail.age || ""}
+            />
             <br />
             Phone:{" "}
-            <input type="text" name="phone" value={technicianDetail.phone} />
+            <input
+              type="text"
+              name="phone"
+              defaultValue={technicianDetail.phone || ""}
+            />
             <br />
             Email:{" "}
-            <input type="text" name="email" value={technicianDetail.email} />
+            <input
+              type="text"
+              name="email"
+              defaultValue={technicianDetail.email || ""}
+            />
             <br />
             City:{" "}
-            <input type="text" name="city" value={technicianDetail.city} />
+            <input
+              type="text"
+              name="city"
+              defaultValue={technicianDetail.city || ""}
+            />
             <br />
             State:{" "}
-            <input type="text" name="state" value={technicianDetail.state} />
+            <input
+              type="text"
+              name="state"
+              defaultValue={technicianDetail.state || ""}
+            />
             <br />
             Address:{" "}
             <input
               type="text"
               name="address"
-              value={technicianDetail.address}
+              defaultValue={technicianDetail.address || ""}
             />
             <br />
             <br />

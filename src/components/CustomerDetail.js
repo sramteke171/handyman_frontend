@@ -13,38 +13,73 @@ class CustomerDetail extends Component {
 
         <form onSubmit={this.props.updateCustomer}>
           <center>
-            <input type="hidden" name="customer_Id" value={CustomerDetail.id} />
-            Name: <input type="text" name="name" value={customerDetail.name} />
+            <input
+              type="hidden"
+              name="customer_Id"
+              defaultValue={customerDetail.id || ""}
+            />
+            Name:{" "}
+            <input
+              type="text"
+              name="name"
+              defaultValue={customerDetail.name || ""}
+            />
             <br />
             Username:{" "}
             <input
               type="text"
               name="user_name"
-              value={customerDetail.username}
+              defaultValue={customerDetail.username || ""}
             />
             <br />
             Password:{" "}
             <input
               type="text"
               name="password"
-              value={customerDetail.password}
+              defaultValue={customerDetail.password || ""}
             />
             <br />
-            Age: <input type="text" name="age" value={customerDetail.age} />
+            Age:{" "}
+            <input
+              type="text"
+              name="age"
+              defaultValue={customerDetail.age || ""}
+            />
             <br />
             Phone:{" "}
-            <input type="text" name="phone" value={customerDetail.phone} />
+            <input
+              type="text"
+              name="phone"
+              defaultValue={customerDetail.phone || ""}
+            />
             <br />
             Email:{" "}
-            <input type="text" name="email" value={customerDetail.email} />
+            <input
+              type="text"
+              name="email"
+              defaultValue={customerDetail.email || ""}
+            />
             <br />
-            City: <input type="text" name="city" value={customerDetail.city} />
+            City:{" "}
+            <input
+              type="text"
+              name="city"
+              defaultValue={customerDetail.city || ""}
+            />
             <br />
             State:{" "}
-            <input type="text" name="state" value={customerDetail.state} />
+            <input
+              type="text"
+              name="state"
+              defaultValue={customerDetail.state || ""}
+            />
             <br />
             Address:{" "}
-            <input type="text" name="address" value={customerDetail.address} />
+            <input
+              type="text"
+              name="address"
+              defaultValue={customerDetail.address || ""}
+            />
             <br />
             <br />
             &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;

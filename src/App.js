@@ -90,6 +90,7 @@ class App extends Component {
       });
   }
 
+  // createTechnician = asynch(e) => {
   createTechnician = (e) => {
     e.preventDefault();
     console.log("add technicians() - e.target", e.target);
@@ -116,12 +117,12 @@ class App extends Component {
   };
 
   //Update technician
-  updateTechnician(e) {
+  updateTechnician = (e) => {
     e.preventDefault();
     console.log("update technnician method - e.target", e.target);
     // let technician_Id = 53;
     // let technician_Id = parseInt(e.target.id);
-    let technician_Id = e.target.id;
+    let technician_Id = e.target.technician_Id.value;
     console.log("technician_Id ", technician_Id);
 
     axios
@@ -140,10 +141,10 @@ class App extends Component {
         this.getTechnicians();
         console.log(response);
       });
-  }
+  };
 
   //Delete Technician
-  deleteTechnician(e) {
+  deleteTechnician = (e) => {
     e.preventDefault();
     console.log("delete request - e.target", e.target);
     console.log("delete request - e.target.id", e.target.id);
@@ -154,10 +155,9 @@ class App extends Component {
       .delete(`${backendUrl}/techniciansC/${technician_Id}`)
       .then((response) => {
         this.getTechnicians();
-        // this.technicians = this.state.technicians;
         console.log(response);
       });
-  }
+  };
 
   //REQUESTS Section
   getRequests() {
@@ -195,19 +195,20 @@ class App extends Component {
   };
 
   //UPDATE Request
-  updateRequest(e) {
+  updateRequest = (e) => {
     e.preventDefault();
     console.log(e.target);
+    let request_Id = e.target.request_Id.value;
     axios
       .put(`${backendUrl}/requestsC/$(e.target.id.value}`)
       .then((response) => {
         this.getRequests();
         console.log(response);
       });
-  }
+  };
 
   //DELETE Request
-  deleteRequest(e) {
+  deleteRequest = (e) => {
     e.preventDefault();
     console.log("delete request - e.target", e.target);
     console.log("delete request - e.target.id", e.target.id);
@@ -217,10 +218,10 @@ class App extends Component {
       // .delete(`${backendUrl}/requestsC/${parseInt(e.target.id.value)}`)
       .delete(`${backendUrl}/requestsC/${request_Id}`)
       .then((response) => {
-        // this.getRequests();
+        this.getRequests();
         console.log(response);
       });
-  }
+  };
 
   //CUSTOMERS or USERS
   getCustomers() {
@@ -287,10 +288,11 @@ class App extends Component {
   };
 
   //Update Customer
-  updateCustomer(e) {
+  updateCustomer = (e) => {
     e.preventDefault();
     console.log("update customer method - e.target", e.target);
-    let user_Id = 16; //parseInt(e.target.id);
+    let user_Id = e.target.customer_Id.value;
+    // let user_Id = 16; //parseInt(e.target.id);
     // let technician_Id = e.target.id;
     console.log("user_Id ", user_Id);
 
@@ -307,12 +309,12 @@ class App extends Component {
         address: e.target.address.value,
       })
       .then((response) => {
-        this.getTechnicians();
+        this.getCustomers();
         console.log(response);
       });
-  }
+  };
 
-  deleteCustomer(e) {
+  deleteCustomer = (e) => {
     e.preventDefault();
     console.log("delete request - e.target", e.target);
     console.log("delete request - e.target.id", e.target.id);
@@ -322,10 +324,10 @@ class App extends Component {
       // .delete(`${backendUrl}/users/${parseInt(e.target.id.value)}`)
       .delete(`${backendUrl}/users/${user_Id}`)
       .then((response) => {
-        // this.getCustomers();
+        this.getCustomers();
         console.log(response);
       });
-  }
+  };
 
   loginUser = (e) => {
     e.preventDefault();

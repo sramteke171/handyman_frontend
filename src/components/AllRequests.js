@@ -10,9 +10,9 @@ class AllRequests extends Component {
           <button id={request.id} onClick={this.props.deleteRequest}>
             Delete
           </button>
-          <button id={request.id} onClick={this.props.updateRequest}>
+          {/* <button id={request.id} onClick={this.props.updateRequest}>
             Edit
-          </button>
+          </button> */}
         </li>
       );
     });

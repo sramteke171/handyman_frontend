@@ -17,6 +17,8 @@ import Home from "./components/Home.js";
 const backendUrl =
   process.env.REACT_APP_BACKEND_URL || "http://localhost:3001/api";
 
+console.log("testing back end url", backendUrl);
+
 //App is the main component that contain all the other components used in this project
 class App extends Component {
   constructor(props) {

@@ -225,7 +225,7 @@ return (
 );
 });
 
-RESOLUTION: After using the "Atributes" in router.get(), fixed an issue -->
+- RESOLUTION: After using the "Atributes" in router.get(), fixed an issue -->
 
 // GET ALL Requests in RequestController of Back-end App
 router.get("/", async (req, res) => {

@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "../App.css";
-//Header Compoenent will comntain a random list of names from the Serie avaliable
-//to display their data on the API by selecting and hitting the search button.
+
 class Header extends Component {
   constructor(props) {
     super(props);
@@ -15,12 +14,6 @@ class Header extends Component {
     };
   }
 
-  //change is a wildcard that changes status to trigger re-rendering
-  //over all the components when needed, specially when a another character is seleced.
-  // change = () => {
-  //   if (this.state.path !== "/") this.props.changeCategory(true);
-  // };
-
   render() {
     return (
       <div className="hContainer">
@@ -31,21 +24,7 @@ class Header extends Component {
         </Link>
         <div className="navbar">
           <div class="link">
-            {/* <Link
-              className="create_request"
-              to="/"
-              onClick={this.props.createRequest}
-            >
-              Create Request
-            </Link> */}
             &nbsp;&nbsp;
-            {/* <Link
-              className="all_requests"
-              to={this.state.path}
-              onClick={this.change}
-            >
-              All Request
-            </Link> */}
             <Link to="/requestsC" className="all_requests">
               Work Requests
             </Link>{" "}
@@ -60,8 +39,32 @@ class Header extends Component {
             &nbsp;&nbsp;
           </div>
           <div>
-            <select className="dropdown" onChange={this.getPath}>
-              <option value="names"></option>
+            <select
+              className="dropdown"
+              onChange={this.getPath}
+              placeholder="handyman categories"
+            >
+              <option value="names" class="optionClass">
+                ------- Handyman Categories -------
+              </option>
+              <option value="names" class="optionClass">
+                --------- Plumber ---------
+              </option>
+              <option value="names" class="optionClass">
+                --------- Carpenter ---------
+              </option>
+              <option value="names" class="optionClass">
+                --------- Electrician ---------
+              </option>
+              <option value="names" class="optionClass">
+                --------- Roofer ---------
+              </option>
+              <option value="names" class="optionClass">
+                --------- Landscaper ---------
+              </option>
+              <option value="names" class="optionClass">
+                --------- Car Mechanic ---------
+              </option>
               {/* {this.props.allNames.map((name, idx) => {
                 return (
                   <option key={idx} value={name}>
@@ -83,7 +86,7 @@ class Header extends Component {
               Signup
             </Link>{" "}
             | &nbsp;
-            <Link to="/auth/login" className="Signup">
+            <Link to="/auth/login" className="Login">
               Login
             </Link>
           </div>

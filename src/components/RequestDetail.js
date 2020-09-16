@@ -7,45 +7,57 @@ class RequestDetail extends Component {
     });
 
     return (
-      <div>
-        {/* <h2>Edit Request: {requestDetail.req_desc} </h2> */}
-        <h2>Edit Request: </h2>
+      <div class="editRequestContainer">
+        <div>
+          {/* <h2>Edit Request: {requestDetail.req_desc} </h2> */}
 
-        <form onSubmit={this.props.updateRequest}>
-          <center>
-            <input
-              type="hidden"
-              name="request_Id"
-              defaultValue={requestDetail.id || ""}
-              // defaultValue={this.props.match.params.id || ""}
-            />
-            <br />
-            Request Description:
-            <textarea
-              name="req_desc"
-              rows="2"
-              cols="75"
-              maxLength="255"
-              placeholder="Describe work (255 chars allowed)"
-              defaultValue={requestDetail.req_desc || ""}
-            />
-            <br />
-            Requested Start Date:
-            <input type="date" />
-            <input
-              type="text"
-              name="req_start_date"
-              defaultValue={requestDetail.req_start_date || ""}
-            />
-            <br />
-            Requested End Date:
-            <input type="date" />
-            <input
-              type="text"
-              name="req_end_date"
-              defaultValue={requestDetail.req_end_date || ""}
-            />
-            <br />
+          <h2>Edit Request: </h2>
+          <br></br>
+          <br></br>
+          <br></br>
+          <form onSubmit={this.props.updateRequest}>
+            <center>
+              <input
+                type="hidden"
+                name="request_Id"
+                defaultValue={requestDetail.id || ""}
+                // defaultValue={this.props.match.params.id || ""}
+              />
+              <br />
+              <br></br>
+              Work Description: <br></br>
+              <textarea
+                name="req_desc"
+                rows="2"
+                cols="75"
+                maxLength="255"
+                placeholder="Describe work (255 chars allowed)"
+                defaultValue={requestDetail.req_desc || ""}
+              />
+              Requested Start Date:&nbsp;
+              <input
+                type="date"
+                name="new_start_date"
+                defaultValue={requestDetail.req_start_date || ""}
+              />
+              <input
+                type="text"
+                name="existing_req_start_date"
+                defaultValue={requestDetail.req_start_date || ""}
+              />
+              <br />
+              Requested End Date:&nbsp;
+              <input
+                type="date"
+                name="new_end_date"
+                defaultValue={requestDetail.req_end_date || ""}
+              />
+              <input
+                type="text"
+                name="existing_req_end_date"
+                defaultValue={requestDetail.req_end_date || ""}
+              />
+              {/* <br />
             UserId:{" "}
             <input
               type="text"
@@ -58,15 +70,14 @@ class RequestDetail extends Component {
               type="text"
               name="tech_id"
               defaultValue={requestDetail.tech_id || ""}
-            />
-            <br />
-            <br />
-            &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
-            &nbsp;&nbsp; &nbsp;
-            <input type="submit" value="Edit" />
-            &nbsp;
-          </center>
-        </form>
+            /> */}
+              <br></br>
+              <br></br>
+              <input type="submit" value="Edit" className="editButton" />
+              &nbsp;
+            </center>
+          </form>
+        </div>
       </div>
     );
   }

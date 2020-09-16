@@ -12,6 +12,7 @@ import CustomerDetail from "./components/CustomerDetail.js";
 import CustomerProfile from "./components/CustomerProfile.js";
 import Signup from "./components/Signup.js";
 import Login from "./components/Login.js";
+import Home from "./components/Home.js";
 
 const backendUrl = process.env.BACKEND_URL || "http://localhost:3001/api";
 
@@ -138,7 +139,8 @@ class App extends Component {
         name: e.target.name.value,
         username: e.target.user_name.value,
         password: e.target.password.value,
-        age: e.target.age.value,
+        age: parseInt(e.target.age.value),
+        img: e.target.img.value,
         phone: e.target.phone.value,
         email: e.target.email.value,
         city: e.target.city.value,
@@ -213,15 +215,33 @@ class App extends Component {
     console.log(e.target);
 
     let request_Id = e.target.request_Id.value;
-    console.log("request_Id ", request_Id);
+    console.log("update request- request_Id ", request_Id);
+    console.log("req_start_date", e.target.existing_req_start_date.value);
+    console.log("req_end_date", e.target.existing_req_end_date.value);
+
+    let new_start_date = "";
+    let new_end_date = "";
+    if (e.target.new_start_date.value) {
+      new_start_date = e.target.new_start_date.value;
+    } else {
+      new_start_date = e.target.existing_req_start_date.value;
+    }
+
+    if (e.target.new_end_date.value) {
+      new_end_date = e.target.new_end_date.value;
+    } else {
+      new_end_date = e.target.existing_req_end_date.value;
+    }
 
     axios
       .put(`${backendUrl}/requestsC/${request_Id}`, {
         req_desc: e.target.req_desc.value,
-        req_start_date: e.target.req_start_date.value,
-        req_end_date: e.target.req_end_date.value,
-        user_id: e.target.user_id.value,
-        tech_id: e.target.tech_id.value,
+        // req_start_date: e.target.req_start_date.value,
+        // req_end_date: e.target.req_end_date.value,
+        req_start_date: new_start_date,
+        req_end_date: new_end_date,
+        // user_id: e.target.user_id.value,
+        // tech_id: e.target.tech_id.value,
       })
       .then((response) => {
         this.getRequests();
@@ -313,7 +333,7 @@ class App extends Component {
           name: e.target.name.value,
           username: e.target.user_name.value,
           password: e.target.password.value,
-          age: e.target.age.value,
+          age: parseInt(e.target.age.value),
           phone: e.target.phone.value,
           email: e.target.email.value,
           city: e.target.city.value,
@@ -347,7 +367,7 @@ class App extends Component {
         name: e.target.name.value,
         username: e.target.user_name.value,
         password: e.target.password.value,
-        age: e.target.age.value,
+        age: parseInt(e.target.age.value),
         phone: e.target.phone.value,
         email: e.target.email.value,
         city: e.target.city.value,
@@ -404,10 +424,24 @@ class App extends Component {
           technicians={this.state.technicians}
           categories={this.state.categories}
         />
+        {/* <Route exact path="/" component={() => <Home />} /> */}
 
         <main className="mainContainer">
           <div> </div>
           <Switch>
+            {/* <Route
+              exact
+              path="/"
+              component={() => (
+                <HomeDetail
+                // requests={this.state.requests}
+                // createRequest={this.createRequest}
+                // deleteRequest={this.deleteRequest}
+                // getRequest={this.getRequests}
+                />
+              )}
+            /> */}
+
             <Route
               exact
               // path="/"

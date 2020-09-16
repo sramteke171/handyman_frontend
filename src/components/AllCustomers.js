@@ -6,7 +6,10 @@ class AllCustomers extends Component {
     const allCustomers = this.props.users.map((user) => {
       return (
         <li key={user.id}>
-          <Link to={`/users/${user.id}`}> {user.name} </Link>
+          <Link class="link" to={`/users/${user.id}`}>
+            {" "}
+            {user.name}{" "}
+          </Link>
           <button id={user.id} onClick={this.props.deleteCustomer}>
             Delete
           </button>
@@ -16,26 +19,27 @@ class AllCustomers extends Component {
 
     return (
       <div>
-        <div class="requestContainer">
-          <div className="all_requests">
-            <form onSubmit={this.props.createCustomer}>
-              <center>
-                &nbsp; Name:
-                <input type="text" name="name" /> &nbsp; Username:
-                <input type="text" name="user_name" /> &nbsp; Password:
-                <input type="text" name="password" /> &nbsp;
-                <input
-                  type="submit"
-                  value="Add Customer"
-                  className="addCustomerButton"
-                />{" "}
-                &nbsp;
-              </center>
-            </form>
-          </div>
+        <div class="createCustomerContainer">
+          <form onSubmit={this.props.createCustomer}>
+            <center>
+              &nbsp; Name:&nbsp;
+              <input type="text" name="name" /> &nbsp; Username:&nbsp;
+              <input type="text" name="user_name" /> &nbsp; Password:&nbsp;
+              <input type="text" name="password" /> &nbsp;
+              <input
+                type="submit"
+                value="Add Customer"
+                className="addCustomerButton"
+              />{" "}
+              &nbsp;
+            </center>
+          </form>
         </div>
-        <div class="requestContainer">
-          <h2> Customers List: </h2>
+        <div class="allCustomerContainer">
+          {/* <h2> Customers: </h2> */}
+          <center>
+            <label class="customerHeading"> Customers : </label>{" "}
+          </center>
           <ul>{allCustomers}</ul>
         </div>
       </div>

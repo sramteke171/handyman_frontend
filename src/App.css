@@ -8,6 +8,7 @@
   grid-template-rows: 15% 80% 5%;
   border: 2px solid;
   /* border-color: #ff0000; */
+  background: url("/images/handyman2.jpg") whitesmoke;
 }
 a {
   text-decoration: none;
@@ -62,7 +63,8 @@ a {
 .create_request,
 .all_requests,
 .handyman_Signup,
-.Signup {
+.Signup,
+.Login {
   color: black;
   justify-content: left;
   align-items: left;
@@ -73,8 +75,15 @@ a {
 .link {
   border-color: black;
 }
+.all_requests:hover,
+.Signup:hover,
+.Login:hover {
+  color: blue;
+}
+
 .searchButton,
 .addCustomerButton,
+/* .addRequestButton, */
 .addTechnicianButton {
   background: url("/images/buttons.png") black;
   background-size: 100% 100%;
@@ -82,6 +91,41 @@ a {
   padding-left: 10px;
   padding-right: 10px;
   margin-left: 5px;
+  border: 0.2vh solid;
+  border-color: white;
+  border-radius: 40px;
+  color: white;
+  font-weight: 500;
+  font-size: 1vw;
+  font-family: "Pinyon Script", cursive;
+}
+
+.signupButton,
+.loginButton,
+.editButton {
+  background: url("/images/buttons.png") black;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 5px;
+  border: 0.2vh solid;
+  border-color: white;
+  border-radius: 40px;
+  color: white;
+  font-weight: 500;
+  font-size: 1.35vw;
+  font-family: "Pinyon Script", cursive;
+}
+
+.addRequestButton {
+  background: url("/images/buttons.png") black;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 5px;
+  margin-bottom: 15px;
   border: 0.2vh solid;
   border-color: white;
   border-radius: 40px;
@@ -101,6 +145,27 @@ a {
   /* text-align: center; */
   text-align: right;
 }
+
+.optionClass {
+  text-align: center;
+}
+
+.homeContainer {
+  grid-row: 2;
+  display: grid;
+  /* grid-template-columns: 20% 60% 20%; */
+  grid-template-columns: 5% 90% 5%;
+  grid-template-rows: 100%;
+  background: url("/images/handyman2.jpg") whitesmoke;
+  background: whitesmoke;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  justify-items: center;
+  align-items: center;
+
+  border-color: red;
+}
+
 .mainContainer {
   grid-row: 2;
   display: grid;
@@ -108,13 +173,14 @@ a {
   grid-template-columns: 5% 90% 5%;
   grid-template-rows: 100%;
   /* background: url("/images/main.jpg") black; */
+  background: url("/images/handyman2.jpg") whitesmoke;
   background: whitesmoke;
   background-size: 100% 100%;
   background-repeat: no-repeat;
   justify-items: center;
   align-items: center;
 
-  overflow-y: auto;
+  /* overflow-y: auto; */
 }
 .requestContainer {
   background-repeat: no-repeat;
@@ -124,7 +190,8 @@ a {
   width: 300;
   height: 300;
   border-color: #1310ce;
-  background: url("/images/mainbg.jpg") rgb(167, 155, 130);
+  /* background: url("/images/handyman1.jpg") lightblue; */
+  background: lightblue;
   font: 1.1vw "Pinyon Script", cursive;
   font-family: "Vanessa Handscript";
   font-size: 1.45vw;
@@ -139,6 +206,312 @@ a {
   grid-template-rows: 100%;
   border-radius: 3vw; */
 }
+
+.allCustomerContainer {
+  background-repeat: no-repeat;
+  justify-items: center;
+  align-items: center;
+  overflow-y: auto;
+  width: 300;
+  height: 300;
+  border-color: #1310ce;
+  background: url("/images/customer.jpg") lightblue;
+  /* background: url("/images/customer.jpg"); */
+  font: 1.1vw "Pinyon Script", cursive;
+  font-family: "Vanessa Handscript";
+  font-size: 1.45vw;
+  color: whitesmoke;
+  padding: 15px;
+
+  /* text-shadow: 0 0 5px goldenrod, 0 0 30px #ff0000; */
+
+  /* background: url("/images/mainbg.jpg") goldenrod;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  display: grid;
+  grid-template-columns: 35% 65%;
+  grid-template-rows: 100%;
+  border-radius: 3vw; */
+}
+
+.technicianContainer {
+  background-repeat: no-repeat;
+  justify-items: center;
+  align-items: center;
+
+  width: 500;
+  height: 500;
+  border-color: red;
+  border-width: 10pt;
+  background: lightblue;
+
+  font: 1.1vw "Pinyon Script", cursive;
+  font-family: "Vanessa Handscript";
+  font-size: 1.45vw;
+  color: black;
+
+  /* text-shadow: 0 0 5px goldenrod, 0 0 30px #ff0000; */
+
+  /* background: url("/images/mainbg.jpg") goldenrod;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  display: grid;
+  grid-template-columns: 35% 65%;
+  grid-template-rows: 100%;
+  border-radius: 3vw; */
+}
+.allTechnicianContainer {
+  justify-items: center;
+  align-items: center;
+  /* overflow-y: auto; */
+  /* overflow-y: visible; */
+  overflow-y: scroll;
+  /* width: 300;
+  height: 300; */
+  border-color: #1310ce;
+  background: url("/images/handyman3.jpg");
+  background-repeat: no-repeat;
+  background-size: 12.4cm 9.5cm;
+  background-position-x: 9cm;
+  height: 100%;
+  background-color: lightblue;
+
+  font: 1.1vw "Pinyon Script", cursive;
+  font-family: "Vanessa Handscript";
+  font-size: 1.45vw;
+  color: black;
+  padding: 15px;
+
+  /* height: 100%; */
+  /* margin-top: 250px;  */
+  /* transform: rotate(90deg);
+  /* All browsers support */
+  /* -moz-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);  */
+}
+
+.createTechnicianContainer,
+.createCustomerContainer,
+.createRequestContainer {
+  /* background: url("/images/mainbg.jpg") black; */
+  background: teal;
+  /* background: rgb(146, 197, 197); */
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  display: grid;
+  grid-template-rows: 100%;
+  border-radius: 3vw;
+
+  justify-content: left;
+  align-items: left;
+  font-weight: 800;
+  font-size: 1vw;
+  color: black;
+  font-family: "Pinyon Script", cursive;
+}
+
+.signupContainer {
+  background: rgb(146, 197, 197);
+  /* background: rgb(170, 199, 199); */
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  display: grid;
+  grid-template-rows: 100%;
+
+  border-radius: 3vw;
+  width: 400px;
+  height: 450px;
+
+  justify-content: center;
+  align-items: center;
+  font-weight: 800;
+  font-size: 1.3vw;
+  color: black;
+  font-family: "Pinyon Script", cursive;
+}
+.loginContainer {
+  background: rgb(146, 197, 197);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  display: grid;
+  grid-template-rows: 100%;
+
+  border-radius: 3vw;
+  width: 400px;
+  height: 250px;
+
+  justify-content: center;
+  align-items: center;
+  font-weight: 800;
+  font-size: 1.3vw;
+  color: black;
+  font-family: "Pinyon Script", cursive;
+}
+
+.editCustomerContainer {
+  background: rgb(146, 197, 197);
+  /* background: rgb(170, 199, 199); */
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  display: grid;
+  grid-template-rows: 100%;
+
+  border-radius: 3vw;
+  width: 400px;
+  height: 480px;
+
+  justify-content: center;
+  align-items: center;
+  font-weight: 800;
+  font-size: 1.3vw;
+  color: black;
+  font-family: "Pinyon Script", cursive;
+}
+.editTechnicianContainer {
+  background: rgb(146, 197, 197);
+  /* background: rgb(170, 199, 199); */
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  display: grid;
+  grid-template-rows: 100%;
+
+  border-radius: 3vw;
+  width: 400px;
+  height: 500px;
+
+  justify-content: center;
+  align-items: center;
+  font-weight: 800;
+  font-size: 1.3vw;
+  color: black;
+  font-family: "Pinyon Script", cursive;
+}
+
+.editRequestContainer {
+  /* background: rgb(146, 197, 197); */
+  /* background: rgb(170, 199, 199); */
+  background: url("/images/handyman4.jpg") lightblue;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  /* background-position-y: 1.1cm; */
+  display: grid;
+  grid-template-rows: 100%;
+
+  border-radius: 3vw;
+  width: 580px;
+  height: 500px;
+
+  justify-content: center;
+  align-items: center;
+  font-weight: 800;
+  font-size: 1.3vw;
+  color: black;
+  font-family: "Pinyon Script", cursive;
+}
+
+.link {
+  color: #fff;
+}
+.link:hover {
+  color: red;
+}
+.techLink {
+  color: red;
+}
+.techLink:hover {
+  color: green;
+}
+
+.customerHeading {
+  font-family: "Vanessa Handscript";
+  text-shadow: 0 0 10px black, 0 0 100px white;
+  font-size: 2vw;
+  font-weight: 560;
+  /* color: rgb(253, 86, 8); */
+  color: orangered;
+  text-align: center;
+  align-items: center;
+  padding: 50px;
+}
+
+.technicianHeading,
+.requestHeading {
+  font-family: "Vanessa Handscript";
+  text-shadow: 0 0 10px white, 0 0 100px red;
+  font-size: 2vw;
+  font-weight: 560;
+  /* color: rgb(253, 86, 8); */
+  color: navy;
+  text-align: center;
+  align-items: center;
+  padding: 50px;
+}
+
+/* ul li::marker {
+  content: "🧔🏾";
+}
+li::marker {
+  color: red;
+  content: "►";
+}
+
+ul li:hover::marker {
+  content: "🤯";
+} */
+
+/* textarea {
+  height: auto;
+  width: 550px;
+  height: 25px;
+  margin-top: 5px;
+} */
+
+textarea {
+  border: 0;
+  padding: 10px;
+  font-size: 1.3em;
+  font-family: "Ubuntu Light", "Ubuntu", "Ubuntu Mono", "Segoe Print",
+    "Segoe UI";
+  color: purple;
+  border: solid 1px #ccc;
+  margin: 0 0 20px;
+  width: 550px;
+  -moz-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+  box-shadow: inner 0 0 4px rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  border: 2px solid black;
+  background: #ffffcc;
+  resize: none;
+}
+
+textarea:focus {
+  outline: none !important;
+  border-color: #719ece;
+  box-shadow: 0 0 10px #719ece;
+}
+textarea[placeholder] {
+  text-align: center;
+}
+
+.labelDescription {
+  margin-top: 0px;
+}
+.techDiv {
+  height: 400px;
+  /* width: 250px; */
+
+  border-width: 10px;
+  border: #ff0000;
+  border-color: red;
+  padding: 25px;
+  margin: 25px;
+}
+
 .banners {
   border: 1px solid;
   width: 90%;
@@ -200,6 +573,15 @@ h2 {
   color: navy;
   text-align: center;
 }
+h4 {
+  font-family: "Vanessa Handscript";
+  /* text-shadow: 0 0 10px black, 0 0 100px white; */
+  font-size: 1vw;
+  font-style: italic;
+  /* font-weight: 560; */
+  color: navy;
+  text-align: center;
+}
 
 /* #b2 {
   grid-column: 3;
@@ -221,7 +603,8 @@ h2 {
   text-shadow: 0 0 5px rgb(0, 50, 177), 0 0 30px midnightblue;
 }
 .characterContainer {
-  background: url("/images/mainbg.jpg") black;
+  /* background: url("/images/mainbg.jpg") black; */
+  background: url("/images/mainbg.jpg") teal;
   background-size: 100% 100%;
   background-repeat: no-repeat;
   display: grid;
@@ -229,21 +612,22 @@ h2 {
   grid-template-rows: 100%;
   border-radius: 3vw;
 }
-.fCol {
+
+/* .fCol {
   grid-column: 1;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   justify-items: center;
-}
-.chImg {
+} */
+/* .chImg {
   width: 100%;
   height: 60vh;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
-}
+} */
 .img {
   width: 20vw;
   height: 47vh;
@@ -326,8 +710,55 @@ h2 {
   text-shadow: 0 0 5px goldenrod, 0 0 30px #ff0000;
   font-style: italic;
 }
-textarea {
-  height: auto;
-  width: 550px;
-  height: 25px;
+
+/* sdfdsf */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after,
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
 }

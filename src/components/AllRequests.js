@@ -16,30 +16,34 @@ class AllRequests extends Component {
     });
 
     return (
-      <div class="requestContainer">
-        <div className="all_requests">
+      <div>
+        <div class="createRequestContainer">
           <form onSubmit={this.props.createRequest}>
             <center>
-              &nbsp; Description:
+              &nbsp;
+              {/* <label class="labelDescription"> Description: </label> */}
               <textarea
                 name="req_desc"
                 rows="2"
                 cols="75"
                 maxLength="255"
+                class="textarea"
                 placeholder="Describe work (255 chars allowed)"
               />
-              &nbsp;
+              &nbsp; <br></br>
               <input
                 type="submit"
                 value="Add Request"
-                className="addCustomerButton"
+                className="addRequestButton"
               />
               &nbsp;{" "}
             </center>
           </form>
         </div>
         <div class="requestContainer">
-          <h2> All Work Requests: </h2>
+          <center>
+            <label class="requestHeading"> All Work Requests : </label>
+          </center>
           <ul>{allRequests}</ul>
         </div>
       </div>

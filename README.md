@@ -49,7 +49,7 @@ deployment :-
 
 App homepage Wireframe: (included under documents folder)
 
-![ER Diagram](documents/ER_Diagram.jpg)
+![ER Diagram](Documents/ER_Diagram.jpg)
 ![Home_Nav Layout](documents/Home_Layout_wireframe.jpg)
 ![Request Layout](documents/Request_wireframe.jpg)
 ![Customers Layout](documents/Customer_wireframe.jpg)

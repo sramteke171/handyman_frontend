@@ -14,7 +14,8 @@ import Signup from "./components/Signup.js";
 import Login from "./components/Login.js";
 import Home from "./components/Home.js";
 
-const backendUrl = process.env.BACKEND_URL || "http://localhost:3001/api";
+const backendUrl =
+  process.env.REACT_APP_BACKEND_URL || "http://localhost:3001/api";
 
 //App is the main component that contain all the other components used in this project
 class App extends Component {

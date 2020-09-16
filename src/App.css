@@ -6,8 +6,8 @@
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: 15% 80% 5%;
-  border: 2px solid;
-  /* border-color: #ff0000; */
+  /* border: 2px solid; */
+  border-color: #ff0000;
   background: url("/images/handyman2.jpg") whitesmoke;
 }
 a {
@@ -15,12 +15,6 @@ a {
 }
 .hContainer {
   grid-row: 1;
-
-  /* grid-template-rows: 100%;
-  grid-template-columns: 20% 60% 20%;
-  border: 2px solid;
-  border-color: blue; */
-
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -54,12 +48,8 @@ a {
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
-
-  /* grid-template-rows: 100%;
-  grid-template-columns: 20% 60% 20%;
-  border: 2px solid;
-  border-color: blue; */
 }
+
 .create_request,
 .all_requests,
 .handyman_Signup,
@@ -75,6 +65,7 @@ a {
 .link {
   border-color: black;
 }
+
 .all_requests:hover,
 .Signup:hover,
 .Login:hover {
@@ -83,7 +74,6 @@ a {
 
 .searchButton,
 .addCustomerButton,
-/* .addRequestButton, */
 .addTechnicianButton {
   background: url("/images/buttons.png") black;
   background-size: 100% 100%;
@@ -150,29 +140,12 @@ a {
   text-align: center;
 }
 
-.homeContainer {
-  grid-row: 2;
-  display: grid;
-  /* grid-template-columns: 20% 60% 20%; */
-  grid-template-columns: 5% 90% 5%;
-  grid-template-rows: 100%;
-  background: url("/images/handyman2.jpg") whitesmoke;
-  background: whitesmoke;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  justify-items: center;
-  align-items: center;
-
-  border-color: red;
-}
-
 .mainContainer {
   grid-row: 2;
   display: grid;
   /* grid-template-columns: 20% 60% 20%; */
   grid-template-columns: 5% 90% 5%;
   grid-template-rows: 100%;
-  /* background: url("/images/main.jpg") black; */
   background: url("/images/handyman2.jpg") whitesmoke;
   background: whitesmoke;
   background-size: 100% 100%;
@@ -216,7 +189,7 @@ a {
   height: 300;
   border-color: #1310ce;
   background: url("/images/customer.jpg") lightblue;
-  /* background: url("/images/customer.jpg"); */
+
   font: 1.1vw "Pinyon Script", cursive;
   font-family: "Vanessa Handscript";
   font-size: 1.45vw;
@@ -449,25 +422,6 @@ a {
   padding: 50px;
 }
 
-/* ul li::marker {
-  content: "🧔🏾";
-}
-li::marker {
-  color: red;
-  content: "►";
-}
-
-ul li:hover::marker {
-  content: "🤯";
-} */
-
-/* textarea {
-  height: auto;
-  width: 550px;
-  height: 25px;
-  margin-top: 5px;
-} */
-
 textarea {
   border: 0;
   padding: 10px;
@@ -527,43 +481,6 @@ textarea[placeholder] {
   background-repeat: no-repeat;
   border-radius: 3vw;
 } */
-.mRandomQuote {
-  grid-column: 2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 2vw;
-}
-.blockquote {
-  /* background: rgba(255, 255, 255, 0.7); */
-  background: rgba(156, 159, 160, 0.7);
-  -webkit-box-shadow: 10px 13px 18px 5px rgba(0, 0, 0, 0.7);
-  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
-  border-top-left-radius: 7vw;
-  border-bottom-right-radius: 7vw;
-  width: 90%;
-  font-size: 3vw;
-  padding: 1vw;
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: 50% 50%;
-}
-.quote {
-  grid-row: 1;
-  font-family: "Vanessa Handscript";
-  color: black;
-  text-shadow: 0 0 5px goldenrod, 0 0 30px #ff0000;
-  text-align: center;
-}
-.name {
-  grid-row: 2;
-  font-family: "Julia-HandScript";
-  text-shadow: 0 0 10px black, 0 0 100px white;
-  font-size: 4vw;
-  font-weight: 560;
-  color: navy;
-  text-align: end;
-}
 
 h2 {
   font-family: "Vanessa Handscript";
@@ -602,42 +519,15 @@ h4 {
   color: wheat;
   text-shadow: 0 0 5px rgb(0, 50, 177), 0 0 30px midnightblue;
 }
-.characterContainer {
-  /* background: url("/images/mainbg.jpg") black; */
-  background: url("/images/mainbg.jpg") teal;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  display: grid;
-  grid-template-columns: 35% 65%;
-  grid-template-rows: 100%;
-  border-radius: 3vw;
-}
 
-/* .fCol {
-  grid-column: 1;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  justify-items: center;
-} */
-/* .chImg {
-  width: 100%;
-  height: 60vh;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
-} */
 .img {
-  width: 20vw;
-  height: 47vh;
-  /* width: 25vw; */
-  /* height: 57vh; */
-  /* border-radius: 5vw; */
-  border-radius: 50%;
+  width: 75vw;
+  height: 67vh;
+  border-radius: 5vw;
   -webkit-box-shadow: 10px 13px 18px 5px rgba(0, 0, 0, 0.7);
   box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
 }
+
 .btns {
   background: url("/images/buttons.png") black;
   background-size: 100% 100%;
@@ -658,29 +548,7 @@ h4 {
   border-color: rgb(143, 93, 0);
   font-style: italic;
 }
-.rating {
-  /* background: url("/images/buttons.png") black; */
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  /* padding: 0.7vw; */
-  /* border: 0.2vh solid;
-  border-color: white;
-  border-radius: 40px; */
-  color: white;
-  font-weight: 200;
-  font: 1.3vw "Pinyon Script", cursive;
-  margin: 0.5vw;
-}
-.quotesCont {
-  grid-column: 2;
-  color: black;
-}
-.chData {
-  font: 1vw "Pinyon Script", cursive;
-  margin-left: 3vw;
-  font-size: 1.2vw;
-  margin-top: 1vw;
-}
+
 .quotesArea {
   display: flex;
   flex-flow: column wrap;
@@ -711,42 +579,7 @@ h4 {
   font-style: italic;
 }
 
-/* sdfdsf */
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
-
-.column {
-  float: left;
-  width: 33.3%;
-  margin-bottom: 16px;
-  padding: 0 8px;
-}
-
-@media screen and (max-width: 650px) {
-  .column {
-    width: 100%;
-    display: block;
-  }
-}
-
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
-
-.container {
-  padding: 0 16px;
-}
-
-.container::after,
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
+/* // */
 .button {
   border: none;
   outline: 0;

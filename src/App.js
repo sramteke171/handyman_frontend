@@ -429,18 +429,18 @@ class App extends Component {
         <main className="mainContainer">
           <div> </div>
           <Switch>
-            {/* <Route
+            <Route
               exact
               path="/"
               component={() => (
-                <HomeDetail
+                <Home
                 // requests={this.state.requests}
                 // createRequest={this.createRequest}
                 // deleteRequest={this.deleteRequest}
                 // getRequest={this.getRequests}
                 />
               )}
-            /> */}
+            />
 
             <Route
               exact

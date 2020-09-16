@@ -1,3 +1,5 @@
+<!-- <img src="https://github.com/sramteke171/handyman_frontend/tree/master/public/titleicon.png" alt="Handyman on Demand" width="50" height="50" /> -->
+
 # Project 4 - Handyman On Demand
 
 Disgned and Developed by:

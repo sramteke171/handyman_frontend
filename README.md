@@ -56,6 +56,7 @@ App homepage Wireframe: (included under documents folder)
 ![Request Layout](Documents/Request_wireframe.jpg)
 ![Customers Layout](Documents/Customer_wireframe.jpg)
 ![Technician Layout](Documents/Technician_wireframe.jpg)
+![Edit Technician Layout](Documents/Edit_Technician_wireframe.jpg)
 
 ## Technologies
 

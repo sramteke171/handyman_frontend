@@ -52,10 +52,10 @@ deployment :-
 App homepage Wireframe: (included under documents folder)
 
 ![ER Diagram](Documents/ER_Diagram.jpg)
-![Home_Nav Layout](documents/Home_Layout_wireframe.jpg)
-![Request Layout](documents/Request_wireframe.jpg)
-![Customers Layout](documents/Customer_wireframe.jpg)
-![Technician Layout](documents/Technician_wireframe.jpg)
+![Home_Nav Layout](Documents/Home_Layout_wireframe.jpg)
+![Request Layout](Documents/Request_wireframe.jpg)
+![Customers Layout](Documents/Customer_wireframe.jpg)
+![Technician Layout](Documents/Technician_wireframe.jpg)
 
 ## Technologies
 

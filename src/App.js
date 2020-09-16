@@ -43,7 +43,7 @@ class App extends Component {
   getTechnicians() {
     axios
       // .get("http://localhost:3001/api/techniciansC", {
-      .get(backendUrl, {
+      .get(`${backendUrl}/techniciansC`, {
         headers: {
           Accept: "application/json",
         },

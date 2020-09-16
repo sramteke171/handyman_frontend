@@ -100,6 +100,7 @@ class App extends Component {
     console.log("technician_Id ", technician_Id);
 
     axios
+      // .put(`${backendUrl}/techniciansC/${technician_Id}`, {
       .put(`${backendUrl}/techniciansC/${technician_Id}`, {
         name: e.target.name.value,
         username: e.target.user_name.value,
@@ -137,7 +138,8 @@ class App extends Component {
   //REQUESTS Section
   getRequests() {
     axios
-      .get("http://localhost:3001/api/requestsC", {
+      // .get("http://localhost:3001/api/requestsC", {
+      .get(`${backendUrl}/requestsC`, {
         headers: {
           Accept: "application/json",
         },
@@ -233,7 +235,8 @@ class App extends Component {
   //CUSTOMERS or USERS
   getCustomers() {
     axios
-      .get("http://localhost:3001/api/users", {
+      // .get("http://localhost:3001/api/users", {
+      .get(`${backendUrl}/users`, {
         headers: {
           Accept: "application/json",
         },

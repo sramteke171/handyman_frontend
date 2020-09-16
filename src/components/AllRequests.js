@@ -8,7 +8,11 @@ class AllRequests extends Component {
       return (
         <li key={request.id}>
           <Link to={`/requestsC/${request.id}`}> {request.req_desc} </Link>
-          <button id={request.id} onClick={this.props.deleteRequest}>
+          <button
+            id={request.id}
+            class="delete"
+            onClick={this.props.deleteRequest}
+          >
             Delete
           </button>
         </li>

@@ -10,7 +10,11 @@ class AllCustomers extends Component {
             {" "}
             {user.name}{" "}
           </Link>
-          <button id={user.id} onClick={this.props.deleteCustomer}>
+          <button
+            id={user.id}
+            class="delete"
+            onClick={this.props.deleteCustomer}
+          >
             Delete
           </button>
         </li>

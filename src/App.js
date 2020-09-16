@@ -35,45 +35,6 @@ class App extends Component {
     this.getRequests();
     this.getCustomers();
     this.getTechnicians();
-
-    // axios
-    //   .get("http://localhost:3001/api/requestsC", {
-    //     headers: {
-    //       Accept: "application/json",
-    //     },
-    //   })
-    //   .then((response) => {
-    //     console.log("Request API - response", response);
-    //     this.setState({
-    //       requests: response.data.requests,
-    //     });
-    //   });
-    // axios
-    //   // .get(`${backendUrl}/users`, {
-    //   .get("http://localhost:3001/api/users", {
-    //     headers: {
-    //       Accept: "application/json",
-    //     },
-    //   })
-    //   .then((response) => {
-    //     console.log("Users API - response", response);
-    //     this.setState({
-    //       users: response.data.users,
-    //     });
-    //   });
-    // axios
-    //   // .get(`${backendUrl}/techniciansC`, {
-    //   .get("http://localhost:3001/api/techniciansC", {
-    //     headers: {
-    //       Accept: "application/json",
-    //     },
-    //   })
-    //   .then((response) => {
-    //     console.log("Technicians API - response", response);
-    //     this.setState({
-    //       technicians: response.data.technicians,
-    //     });
-    //   });
   };
 
   getTechnicians() {
@@ -424,27 +385,14 @@ class App extends Component {
           technicians={this.state.technicians}
           categories={this.state.categories}
         />
-        {/* <Route exact path="/" component={() => <Home />} /> */}
 
         <main className="mainContainer">
           <div> </div>
           <Switch>
-            <Route
-              exact
-              path="/"
-              component={() => (
-                <Home
-                // requests={this.state.requests}
-                // createRequest={this.createRequest}
-                // deleteRequest={this.deleteRequest}
-                // getRequest={this.getRequests}
-                />
-              )}
-            />
+            <Route exact path="/" component={() => <Home />} />
 
             <Route
               exact
-              // path="/"
               path="/requestsC"
               component={() => (
                 <AllRequests

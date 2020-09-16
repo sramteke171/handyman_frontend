@@ -8,7 +8,6 @@
   grid-template-rows: 15% 80% 5%;
   /* border: 2px solid; */
   border-color: #ff0000;
-  background: url("/images/handyman2.jpg") whitesmoke;
 }
 a {
   text-decoration: none;
@@ -146,13 +145,10 @@ a {
   /* grid-template-columns: 20% 60% 20%; */
   grid-template-columns: 5% 90% 5%;
   grid-template-rows: 100%;
-  background: url("/images/handyman2.jpg") whitesmoke;
-  background: whitesmoke;
   background-size: 100% 100%;
   background-repeat: no-repeat;
   justify-items: center;
   align-items: center;
-
   /* overflow-y: auto; */
 }
 .requestContainer {
@@ -170,14 +166,6 @@ a {
   font-size: 1.45vw;
   color: black;
   /* text-shadow: 0 0 5px goldenrod, 0 0 30px #ff0000; */
-
-  /* background: url("/images/mainbg.jpg") goldenrod;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  display: grid;
-  grid-template-columns: 35% 65%;
-  grid-template-rows: 100%;
-  border-radius: 3vw; */
 }
 
 .allCustomerContainer {
@@ -189,50 +177,30 @@ a {
   height: 300;
   border-color: #1310ce;
   background: url("/images/customer.jpg") lightblue;
-
   font: 1.1vw "Pinyon Script", cursive;
   font-family: "Vanessa Handscript";
   font-size: 1.45vw;
   color: whitesmoke;
   padding: 15px;
-
   /* text-shadow: 0 0 5px goldenrod, 0 0 30px #ff0000; */
-
-  /* background: url("/images/mainbg.jpg") goldenrod;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  display: grid;
-  grid-template-columns: 35% 65%;
-  grid-template-rows: 100%;
-  border-radius: 3vw; */
 }
 
 .technicianContainer {
   background-repeat: no-repeat;
   justify-items: center;
   align-items: center;
-
   width: 500;
   height: 500;
   border-color: red;
   border-width: 10pt;
   background: lightblue;
-
   font: 1.1vw "Pinyon Script", cursive;
   font-family: "Vanessa Handscript";
   font-size: 1.45vw;
   color: black;
-
   /* text-shadow: 0 0 5px goldenrod, 0 0 30px #ff0000; */
-
-  /* background: url("/images/mainbg.jpg") goldenrod;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  display: grid;
-  grid-template-columns: 35% 65%;
-  grid-template-rows: 100%;
-  border-radius: 3vw; */
 }
+
 .allTechnicianContainer {
   justify-items: center;
   align-items: center;
@@ -270,7 +238,6 @@ a {
 .createRequestContainer {
   /* background: url("/images/mainbg.jpg") black; */
   background: teal;
-  /* background: rgb(146, 197, 197); */
   background-size: 100% 100%;
   background-repeat: no-repeat;
   display: grid;
@@ -287,16 +254,13 @@ a {
 
 .signupContainer {
   background: rgb(146, 197, 197);
-  /* background: rgb(170, 199, 199); */
   background-size: 100% 100%;
   background-repeat: no-repeat;
   display: grid;
   grid-template-rows: 100%;
-
   border-radius: 3vw;
   width: 400px;
   height: 450px;
-
   justify-content: center;
   align-items: center;
   font-weight: 800;
@@ -310,11 +274,9 @@ a {
   background-repeat: no-repeat;
   display: grid;
   grid-template-rows: 100%;
-
   border-radius: 3vw;
   width: 400px;
   height: 250px;
-
   justify-content: center;
   align-items: center;
   font-weight: 800;
@@ -325,16 +287,13 @@ a {
 
 .editCustomerContainer {
   background: rgb(146, 197, 197);
-  /* background: rgb(170, 199, 199); */
   background-size: 100% 100%;
   background-repeat: no-repeat;
   display: grid;
   grid-template-rows: 100%;
-
   border-radius: 3vw;
   width: 400px;
   height: 480px;
-
   justify-content: center;
   align-items: center;
   font-weight: 800;
@@ -344,16 +303,13 @@ a {
 }
 .editTechnicianContainer {
   background: rgb(146, 197, 197);
-  /* background: rgb(170, 199, 199); */
   background-size: 100% 100%;
   background-repeat: no-repeat;
   display: grid;
   grid-template-rows: 100%;
-
   border-radius: 3vw;
   width: 400px;
   height: 500px;
-
   justify-content: center;
   align-items: center;
   font-weight: 800;
@@ -363,19 +319,15 @@ a {
 }
 
 .editRequestContainer {
-  /* background: rgb(146, 197, 197); */
-  /* background: rgb(170, 199, 199); */
   background: url("/images/handyman4.jpg") lightblue;
   background-size: 100% 100%;
   background-repeat: no-repeat;
   /* background-position-y: 1.1cm; */
   display: grid;
   grid-template-rows: 100%;
-
   border-radius: 3vw;
   width: 580px;
   height: 500px;
-
   justify-content: center;
   align-items: center;
   font-weight: 800;
@@ -402,7 +354,6 @@ a {
   text-shadow: 0 0 10px black, 0 0 100px white;
   font-size: 2vw;
   font-weight: 560;
-  /* color: rgb(253, 86, 8); */
   color: orangered;
   text-align: center;
   align-items: center;
@@ -455,29 +406,31 @@ textarea[placeholder] {
 .labelDescription {
   margin-top: 0px;
 }
-.techDiv {
-  height: 400px;
-  /* width: 250px; */
 
-  border-width: 10px;
+/* .techDiv {
+  height: 400px; */
+/* width: 250px; */
+
+/* border-width: 10px;
   border: #ff0000;
   border-color: red;
   padding: 25px;
   margin: 25px;
-}
+} */
 
-.banners {
-  border: 1px solid;
-  width: 90%;
-  height: 90%;
-  border: 0.5vh solid transparent;
-  border-top-style: none;
-  border-image: linear-gradient(to bottom, rgb(218, 65, 38), black) 1 100%;
-}
 /* #b1 {
   grid-column: 1;
   background: url("https://media.giphy.com/media/6WdfqTu3GkQ6s/giphy.gif") black;
   background-size: 100% 100%;
+  background-repeat: no-repeat;
+  border-radius: 3vw;
+} */
+
+/* #b2 {
+  grid-column: 3;
+  background: url("https://media.giphy.com/media/iDfP8wxwqu248uPo17/giphy.gif")
+    black;
+  background-size: 115% 115%;
   background-repeat: no-repeat;
   border-radius: 3vw;
 } */
@@ -500,14 +453,6 @@ h4 {
   text-align: center;
 }
 
-/* #b2 {
-  grid-column: 3;
-  background: url("https://media.giphy.com/media/iDfP8wxwqu248uPo17/giphy.gif")
-    black;
-  background-size: 115% 115%;
-  background-repeat: no-repeat;
-  border-radius: 3vw;
-} */
 .footer {
   font-family: "Game of Thrones";
   text-align: center;
@@ -549,14 +494,14 @@ h4 {
   font-style: italic;
 }
 
-.quotesArea {
+/* .quotesArea {
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
   align-items: flex-start;
   justify-items: center;
-}
-.sQuote {
+} */
+/* .sQuote {
   list-style-type: none;
   margin: 8px;
   width: 25vw;
@@ -573,10 +518,29 @@ h4 {
   border-bottom-right-radius: 5vw;
   -webkit-box-shadow: 10px 13px 18px 5px rgba(0, 0, 0, 0.7);
   box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
-}
-.chDetail {
+} */
+/* .chDetail {
   text-shadow: 0 0 5px goldenrod, 0 0 30px #ff0000;
   font-style: italic;
+} */
+
+.delete {
+  width: 50px;
+  height: 20px;
+  border: none;
+  background: url("/images/delete.jpg");
+  color: orangered;
+  /* color: transparent; */
+  /* background-color: #000; */
+}
+.delete:hover {
+  background-color: orangered;
+}
+.delete:active {
+  background: olive;
+}
+.delete:focus {
+  background: red;
 }
 
 /* // */

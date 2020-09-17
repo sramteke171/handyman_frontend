@@ -1,7 +1,7 @@
 import "./App.css";
 import React, { Component } from "react";
 import axios from "axios";
-import { Route, Link, Switch, Redirect } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import Header from "./components/Header";
 import AllTechnicians from "./components/AllTechnicians.js";
 import TechnicianDetail from "./components/TechnicianDetail.js";

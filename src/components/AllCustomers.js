@@ -40,7 +40,6 @@ class AllCustomers extends Component {
           </form>
         </div>
         <div class="allCustomerContainer">
-          {/* <h2> Customers: </h2> */}
           <center>
             <label class="customerHeading"> Customers : </label>{" "}
           </center>

@@ -47,14 +47,14 @@ class AllTechnicians extends Component {
     //       </button>
     //     </li>
 
-    let imgS = (allTechnicians) => {
-      for (let i = 0; i < allTechnicians.length; i++) {
-        return (
-          // <img src="abc.jpg"> element </img>;
-          <h2>display images</h2>
-        );
-      }
-    };
+    // let imgS = (allTechnicians) => {
+    //   for (let i = 0; i < allTechnicians.length; i++) {
+    //     return (
+    //       // <img src="abc.jpg"> element </img>;
+    //       <h2>display images</h2>
+    //     );
+    //   }
+    // };
 
     return (
       <div class="technicianContainer">

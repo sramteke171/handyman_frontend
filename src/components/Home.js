@@ -4,7 +4,9 @@ class Home extends Component {
   render() {
     return (
       <div>
-        <img src="/images/handyman2.jpg" class="img" alt=""></img>
+        <div class="image-container fade">
+          <img src="/images/handyman6.jpg" class="img" alt=""></img>
+        </div>
       </div>
     );
   }

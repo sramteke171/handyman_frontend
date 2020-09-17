@@ -102,6 +102,13 @@ Handyman On Demand (React App)
   - Request.js
   - Categories.js
 
+- Backend Controllers
+
+  - authController.js
+  - requestController.js
+  - technicianController.js
+  - usersController.js
+
   <!-- - Images.json -->
 
 ## Additional Libraries

@@ -2,6 +2,8 @@
 
 # Project 4 - Handyman On Demand
 
+<!-- ![Handyman_homepage](Documents/handyman_homepage.jpg) -->
+
 Disgned and Developed by:
 
 - Sachin Ramteke
@@ -41,9 +43,7 @@ GitHub Repository:
 - Backend Express API :- https://github.com/sramteke171/handyman_backend
 - Frontend React API :- https://github.com/sramteke171/handyman_frontend
 
-- Heroku Git URL :- https://git.heroku.com/handyman-on-demand-react.git
-
-deployment :-
+Heroku Deployed URLs:-
 
 - heroku Front-end App:- https://handyman-on-demand-react.herokuapp.com/
 - heroku Back-end App:- https://handyman-on-demand.herokuapp.com/api

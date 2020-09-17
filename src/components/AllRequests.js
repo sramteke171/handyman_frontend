@@ -30,11 +30,12 @@ class AllRequests extends Component {
                 name="req_desc"
                 rows="2"
                 cols="75"
-                maxLength="255"
+                // maxLength="255"
+                maxLength="100"
                 class="textarea"
                 placeholder="Describe work (255 chars allowed)"
               />
-              &nbsp; <br></br>
+              <br></br>
               <input
                 type="submit"
                 value="Add Request"

@@ -234,9 +234,9 @@ a {
   -ms-transform: rotate(90deg);  */
 }
 
+/* .createRequestContainer, */
 .createTechnicianContainer,
-.createCustomerContainer,
-.createRequestContainer {
+.createCustomerContainer {
   /* background: url("/images/mainbg.jpg") black; */
   background: teal;
   background-size: 100% 100%;
@@ -244,6 +244,23 @@ a {
   display: grid;
   grid-template-rows: 100%;
   border-radius: 3vw;
+
+  justify-content: left;
+  align-items: left;
+  font-weight: 800;
+  font-size: 1vw;
+  color: black;
+  font-family: "Pinyon Script", cursive;
+}
+
+.createRequestContainer {
+  /* background: url("/images/mainbg.jpg") black; */
+  background: teal;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  display: grid;
+  grid-template-rows: 100%;
+  /* border-radius: 3vw; */
 
   justify-content: left;
   align-items: left;
@@ -376,7 +393,10 @@ a {
 
 textarea {
   border: 0;
-  padding: 10px;
+  /* padding: 10px; */
+  margin-top: 2px;
+  margin-left: 5px;
+  margin-right: 5px;
   font-size: 1.3em;
   font-family: "Ubuntu Light", "Ubuntu", "Ubuntu Mono", "Segoe Print",
     "Segoe UI";

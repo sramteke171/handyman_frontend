@@ -15,15 +15,14 @@ Disgned and Developed by:
 "Handyman on Demand" App is for creating work requests, searching the work technicians (a.k.a handyman), and variety of work request.
 This app helps you to complete your work demand (whether you need a plumber, carpenter, electrician, mechanic etc.)
 
-### Learning Goal: Develop a full stack application using REACT framework and Postgres Database, with the following features:-
+- Learning Goal: Develop a full stack application using REACT framework and Postgres Database, with the following features:-
 
-- Use a third party API; Usage of axios
-- Usage of React Components
-- State management
-- GIT code integration - code check-in, check-out
-
-- Heroku production deployment
-- Implementation of REST-ful routes
+  - Use a third party API; Usage of axios
+  - Usage of React Components
+  - State management
+  - GIT code integration - code check-in, check-out
+  - Heroku production deployment
+  - Implementation of REST-ful routes
 
 ## Minimum Viable Product (MVP):-
 

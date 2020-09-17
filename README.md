@@ -95,6 +95,13 @@ Handyman On Demand (React App)
     - Signup.js
     - Login.js
 
+- Models
+
+  - User.js
+  - Technician.js
+  - Request.js
+  - Categories.js
+
   <!-- - Images.json -->
 
 ## Additional Libraries

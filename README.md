@@ -27,7 +27,7 @@ This app helps you to complete your work demand (whether you need a plumber, car
 
 ## Minimum Viable Product (MVP):-
 
-- MVP goal: The React application (i.e. Handyman On Demand) has been designed and developed to submit a work requst and to search a technician (a.k.a. Handyman) (whether it is plumbing requests, grocery deliveries, or finding nanny etc.):
+- MVP goal: The React application (i.e. Handyman On Demand) has been designed and developed to submit a work requst and to search a technician (a.k.a. Handyman such as a plumber, carpenter, electrician, mechanic etc.):
 
 - A working REACT application, using Node.js, Express, React Dom, React Dom Router
 
